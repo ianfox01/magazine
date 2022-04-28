@@ -1,0 +1,326 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"background",
+				"background-color\tproperty"
+			],
+			[
+				"align",
+				"align-items\tproperty"
+			],
+			[
+				"border",
+				"border\tproperty"
+			],
+			[
+				"space-",
+				"space-between\tjustify-content"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			],
+			[
+				"grid",
+				"grid-column\tproperty"
+			],
+			[
+				"grid-template",
+				"grid-template-columns\tproperty"
+			],
+			[
+				"grid-t",
+				"grid-template-columns\tproperty"
+			],
+			[
+				"grid-te",
+				"grid-template-columns\tproperty"
+			],
+			[
+				"grid-a",
+				"grid-auto-rows\tproperty"
+			],
+			[
+				"back",
+				"background\tproperty"
+			],
+			[
+				"border-ra",
+				"border-radius\tproperty"
+			],
+			[
+				"max-",
+				"max-width\tproperty"
+			],
+			[
+				"max",
+				"max-width\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 4634,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "/***\n    The new CSS reset - version 1.5.1 (last updated 1.3.2022)\n    GitHub page: https://github.com/elad2412/the-new-css-reset\n***/\n\n/*\n    Remove all the styles of the \"User-Agent-Stylesheet\", except for the 'display' property\n    - The \"symbol *\" part is to solve Firefox SVG sprite bug\n */\n*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {\n    all: unset;\n    display: revert;\n}\n\n/* Preferred box-sizing value */\n*,\n*::before,\n*::after {\n    box-sizing: border-box;\n}\n\n/* Reapply the pointer cursor for anchor tags */\na, button {\n    cursor: revert;\n}\n\n/* Remove list styles (bullets/numbers) */\nol, ul, menu {\n    list-style: none;\n}\n\n/* For images to not be able to exceed their container */\nimg {\n    max-width: 100%;\n}\n\n/* removes spacing between cells in tables */\ntable {\n    border-collapse: collapse;\n}\n\n/* revert the 'white-space' property for textarea elements on Safari */\ntextarea {\n    white-space: revert;\n}\n\n/* minimum style to allow to style meter element */\nmeter {\n    -webkit-appearance: revert;\n    appearance: revert;\n}\n\n/* reset default text opacity of input placeholder */\n::placeholder {\n    color: unset;\n}\n\n/* fix the feature of 'hidden' attribute.\n   display:revert; revert to element instead of attribute */\n:where([hidden]) {\n    display: none;\n}\n\n/* revert for bug in Chromium browsers\n   - fix for the content editable attribute will work properly. */\n:where([contenteditable]) {\n    -moz-user-modify: read-write;\n    -webkit-user-modify: read-write;\n    overflow-wrap: break-word;\n    -webkit-line-break: after-white-space;\n}\n\n/* apply back the draggable feature - exist only in Chromium and Safari */\n:where([draggable=\"true\"]) {\n    -webkit-user-drag: element;\n}\n\n\n/* ===== VARIABLES =================================== */\n\n:root {\n    --gold-solid: #fb0; \n    --gold-80: #ffbb0080; \n    --gold-50: #ffbb0050;\n    --white: #000;\n    --white-80: #00000080;\n    --glen-mist: #3c3c3c;   \n    --glen-mist-80: #3c3c3c80;\n    --glen-mist-50: #3c3c3c50;\n    --accent-torquise: #5abbc3;\n    --accent-torquise-80: #5abbc380;\n    --accent-torquise-50: #5abbc350;\n}\n\n/* ===== BASE STYLES =================================== */\n\nbody {\n    font-family: 'Proxima-Nova';\n    font-weight: 400;\n}\n\n/* ===== HEADER =================================== */\n\n.global-header {\n    width: 100%;\n    height: 80px;\n    background-color: #cccccc40;\n}\n\n/* ===== HERO =================================== */\n\n.hero {\n    width: 100%;\n    min-height: 500px;\n    background-color: #cccccc80;\n    display: flex;\n}\n\n.hero-content {\n    max-width: 700px;\n    margin-left: calc(50% - 400px);\n    padding: 100px 0 20px;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;   \n}\n\n.hero-content h1 {\n    font-size: 3rem;\n    font-weight: 300;\n}\n\n.hero-content h1 span {\n    background-color: #cccccc80;\n    outline: 10px solid #cccccc80;    \n}\n\n.hero-content h1 strong {\n   font-weight: 700;\n}\n\n.hero-content p.subhead {\n    font-size: 1.5rem;\n    margin-top: 30px;\n    line-height: 2rem; \n    font-weight: 300;\n}\n\n/* ----- BODY ----- */\n\n.body-container {\n    margin: 0 20px;\n}\n\n.body-section {\n    width: 100%;\n    max-width: 700px;\n    margin: 0 auto;\n}\n\n.body-container h2 {\n    font-size: 2rem;\n    text-align: center;\n    margin: 20px 0;\n    padding: 0 10px;\n}\n\n.body-container p {\n    font-size: 1.125rem;\n    line-height: 1.75rem;\n    font-weight: 300;\n    margin-top: 20px;\n    margin-bottom: 20px;\n}\n\nfigure.full-width {\n    background: #cccccc80;\n    width: calc(100% + 200px);\n    height: 450px;\n    margin-left: -100px;\n}\n\n/* Full-bleed section -- allows content within this container to expand to screen edge */\n\n.full-bleed-section {\n    background: #cccccc80;\n    height: 600px;\n    width: calc(100% + 40px);\n    margin-left: -20px;\n    margin-right: -20px;\n}\n\n\n/*  Pull Quotes  */\n\nblockquote.pull-quote {\n    border-top: 1px solid #000;\n    border-bottom: 1px solid #000;\n    margin: 0 15px;\n    padding: 10px 15px;\n}\n\nblockquote.pull-quote.left {\n    border-top: 1px solid #000;\n    border-bottom: 1px solid #000;\n    margin: 10px 30px 10px -50px;\n    max-width: 50%;\n    float: left;\n}\n\nblockquote.pull-quote.right {\n    border-top: 1px solid #000;\n    border-bottom: 1px solid #000;\n    margin: 10px -50px 10px 30px;\n    max-width: 50%;\n    float: right;\n}\n\n/* ===== MEDIA QUERIES  =================================== */\n\n@media only screen and (max-width: 1200px) {\n    .full-bleed-section {\n        background: #cccccc80;\n        height: 500px;\n        width: calc(100% + 40px);\n        margin-left: -20px;\n        margin-right: -20px;\n    }\n}\n\n@media only screen and (max-width: 960px) {\n    .hero-content {\n        max-width: 100%;\n        margin: 0 20px;\n        padding-top: 100px;\n    }\n\n    figure.full-width {\n        background: #cccccc80;\n        width: 100%;\n        height: 350px;\n        margin-left: unset;\n    }\n\n    .full-bleed-section {\n        height: 350px;\n        width: calc(100% + 40px);\n    }\n}\n\n@media only screen and (max-width: 500px) {\n    .full-bleed-section {\n        height: 250px;\n    }\n\n /* reponsive typography */ \n    .body-container p {\n        font-size: 1rem;\n        line-height: 1.5rem;\n    }\n    .body-container h2 {\n        font-size: 1.75rem;\n        line-height: 2.5rem;\n    }\n\n    .hero-content h1 {\n        font-size: 2.5rem;\n    }\n\n    .hero-content p.subhead {\n        font-size: 1.25rem;\n        line-height: 1.75rem;\n    }\n}\n\n\n/* grid line overlay */\n\n\n.overlay-grid {\n    pointer-events: none;\n}\n\n.overlay-700 {\n    width: 700px;\n    height: 100vh;\n    position: fixed;\n    margin: 0 auto;\n    border: 1px solid #00bcd4;\n    border-top: none;\n    border-bottom: none;\n    left: 50%;\n    transform: translate(-50%, 0);\n}\n\n.overlay-900 {\n    width: 900px;\n    height: 100vh;\n    position: fixed;\n    margin: 0 auto;\n    border: 1px solid #00bcd4;\n    border-top: none;\n    border-bottom: none;\n    left: 50%;\n    transform: translate(-50%, 0);\n}",
+			"file": "css/main.css",
+			"file_size": 5844,
+			"file_write_time": 132948510861305410,
+			"settings":
+			{
+				"buffer_size": 5961,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/danielfox/Desktop/callout-changes-txt-2",
+		"/Users/danielfox/Desktop/screen1.jpg",
+		"/Users/danielfox/Desktop/HTML Project/Infographics/css/thing.scss",
+		"/Users/danielfox/Desktop/event-block-callout-css.txt",
+		"/Users/danielfox/Desktop/HTML Project/Infographics/css/styles.css",
+		"/Users/danielfox/Desktop/HTML Project/Infographics/infographics.html",
+		"/Users/danielfox/Desktop/HTML Project/Infographics/css/styles-refactor.css",
+		"/Users/danielfox/Desktop/HTML Project/css/styles.css",
+		"/Users/danielfox/Desktop/HTML Project/Infographics/css/old-styles.css",
+		"/Users/danielfox/Desktop/HTML Project/css/styles-complex-working.css",
+		"/Users/danielfox/Desktop/HTML Project/complex-infographics.html",
+		"/Users/danielfox/Desktop/HTML Project/infographics.html",
+		"/Users/danielfox/Desktop/HTML Project/css/styles-complex.css",
+		"/Users/danielfox/Desktop/HTML Project/css/styles-basic.css",
+		"/Users/danielfox/Desktop/HTML Project/basic-infographics.html",
+		"/Users/danielfox/Desktop/HTML Project/complex-infographics-working.html",
+		"/Users/danielfox/Desktop/HTML Project/index-2.html",
+		"/Users/danielfox/Desktop/HTML Project/index.html",
+		"/Users/danielfox/Desktop/HTML Project/untitled",
+		"/Users/danielfox/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
+		"/Users/danielfox/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4634,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								848,
+								848
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5961,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1734,
+								1743
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Magazine Redesign.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
